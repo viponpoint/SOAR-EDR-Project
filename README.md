@@ -5,9 +5,9 @@
 In modern cybersecurity practices, the integration of SOAR (Security Orchestration, Automation, and Response) platforms with EDR (Endpoint Detection and Response) tools is essential for efficient threat management and incident response. This project leverages LimaCharlie as the EDR solution and Tines as the SOAR platform to create an automated response workflow for handling malware infections. Specifically, it addresses the scenario where a user executes a hack tool that infects their computer with LaZagne, an open-source credential retrieval tool. This playbook demonstrates how to automate detection, notification, and remediation steps to enhance security operations.
 
 # Diagram
-![Screenshot 2024-05-11 171331](https://github.com/viponpoint/ActiveDirectory-Project/assets/138403216/22837d67-26a9-40c8-95cf-09aa97858300)
 
-![SOAR-EDR-Diagram](https://github.com/viponpoint/SOAR-EDR-Project/commit/19b9653674402fd05c3f155ea9d6f99166f19f04)
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SOAR-EDR.Diagram.png)
+
 
 ## Objectives
 1.  Detect Malware Execution: Identify when a user executes a hack tool that leads to a LaZagne infection.
