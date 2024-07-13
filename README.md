@@ -2,7 +2,7 @@
 
 # Introduction
 
-In modern cybersecurity practices, the integration of SOAR (Security Orchestration, Automation, and Response) platforms with EDR (Endpoint Detection and Response) tools is essential for efficient threat management and incident response. This project leverages LimaCharlie as the EDR solution and Tines as the SOAR platform to create an automated response workflow for handling malware infections. Specifically, it addresses the scenario where a user executes a hack tool that infects their computer with LaZagne, an open-source credential retrieval tool. This playbook demonstrates how to automate detection, notification, and remediation steps to enhance security operations.
+In modern cybersecurity practices, the integration of SOAR (Security Orchestration, Automation, and Response) platforms with EDR (Endpoint Detection and Response) tools is essential for efficient threat management and incident response. Many security operations centers are starting to implement some kind of SOAR, and the objectives remain the same, reduction of repetitive task with automation while following a structured process, and these processes are also known as PlayBooks. This project leverages LimaCharlie as the EDR solution and Tines as the SOAR platform to create an automated response workflow for handling malware infections. Specifically, it addresses the scenario where a user executes a hack tool that infects their computer with LaZagne, an open-source credential retrieval tool. This playbook demonstrates how to automate detection, notification, and remediation steps to enhance security operations. One of the goals of this project is to get some hands-on experience with an EDR and SOAR by using Lima Charlie and Tines.
 
 # Diagram
 
