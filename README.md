@@ -8,86 +8,62 @@ In modern cybersecurity practices, the integration of SOAR (Security Orchestrati
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SOAR-EDR.Diagram.png)
 
+#### Objectives
+1. **Detect Malware Execution:** Identify when a user executes a hack tool that leads to a LaZagne infection.
+2. **Automate Threat Notifications:** Send detailed alerts to the security team via Slack and email upon detection.
+3. **Prompt for User Action:** Request user input on whether to isolate the compromised machine.
+4. **Automate Machine Isolation:** Automatically isolate the infected machine if the user approves.
+5. **Update on Action Taken:** Inform the security team about the isolation status and the next steps.
 
-## Objectives
-1.  Detect Malware Execution: Identify when a user executes a hack tool that leads to a LaZagne infection.
-2.  Automate Threat Notifications: Send detailed alerts to the security team via Slack and email upon detection.
-3.  Prompt for User Action: Request user input on whether to isolate the compromised machine.
-4.  Automate Machine Isolation: Automatically isolate the infected machine if the user approves.
-5.  Update on Action Taken: Inform the security team about the isolation status and the next steps.
+#### Skills Learnt
+- Configuring and using EDR tools for malware detection.
+- Setting up and managing SOAR platforms for automated incident response.
+- Integrating different security tools to create cohesive workflows.
+- Automating notifications and user prompts through communication platforms.
+- Implementing decision-based automation for incident remediation.
 
-### Skills Learned
+#### Tools Used
+- **LaZagne:** Malware used for retrieving passwords stored on the infected computer.
+- **LimaCharlie:** EDR platform used for detecting and responding to the malware infection.
+- **Tines:** SOAR platform used for orchestrating the automated incident response workflow.
+- **Slack:** Messaging platform for real-time notifications to the security team.
+- **Email:** Communication medium for sending detailed alerts and user prompts.
 
-- Advanced understanding of SIEM concepts and practical application.
-- Development of critical thinking and problem-solving skills in cybersecurity.
-- Proficiency in analyzing and interpreting network logs.
-- Installation and configuration of Windows Server 2022
-- Installation and configuration of Splunk Server
-- Installation and configuration of Windows machine, splunk universal forwarder, sysmon, actomic red team. 
-- Installation and configuration of Kali linux machine for the bruteforce attack using Crowbar.
-- Understanding of forwarders (Universal and Heavy Forwarders) and configuring them to send data to the Splunk indexer.
-- Initial configuration of Splunk, including setting up management ports, specifying directories for indexing data, and configuring Splunk to start at boot.
-- Setting up and managing DNS, which is critical for AD operations.
-- Installing the Active Directory Domain Services (AD DS) role.
-- Promoting a server to a domain controller.
-- Initial configuration tasks, such as creating the first domain in a new forest.
-- Installation, configuration, and management of Windows Server operating systems.
-- Enhanced knowledge of network protocols and security vulnerabilities.
+#### Steps Taken
 
+1. **Execution of Hack Tool:**
+   - A user inadvertently executes a hack tool, resulting in the computer being infected with LaZagne malware.
 
-### Tools Used
-- Security Information and Event Management (SIEM) system for log ingestion and analysis.
-- Windows Server 2022 was used to install and configure Active Directory, which serves as the primary directory service for user and computer management within the domain.
-- Windows 10 Client Machine was used to act as domain-joined client machines for testing user authentication, policy enforcement, and monitoring.
-- Active Directory Domain Services (AD DS) was used to manage domain resources, user authentication, and policy enforcement within the Windows Server environment.
-- Splunk Universal Forwarder was used to collect and forward log data from Windows machines to the Splunk server for centralized log analysis.
-- Sysmon (System Monitor) was used to provide detailed event logging on Windows machines, capturing high-value security event data.
-- Kali Linux was used to serve as a penetration testing platform, executing various security assessments and vulnerability exploits against the network.
-- Crowbar (Brute Force Tool) was used to perform brute force attacks against services such as RDP, SSH, VNC, and others, specifically targeting Active Directory credentials.
-- Splunk inputs.conf
-  
-## Steps
-The objective is to install virtual machines on virtualbox. By the end of the installation, i had one Windows 10 machine, one Kali Linux up, one Splunk server, and one Windows Server 2022. Diagrams to follow
+2. **Detection by LimaCharlie:**
+   - LimaCharlie detects the presence of LaZagne and logs the incident as a security threat.
+   - The detection event is sent to Tines for further processing.
 
+3. **Processing by Tines:**
+   - Upon receiving the detection data from LimaCharlie, Tines initiates an automated workflow.
+   - Tines sends a detailed alert message to a predefined Slack channel, notifying the security team of the malware detection.
+   - Simultaneously, Tines sends an email with the detection details to a designated email address, prompting the recipient (SOC analyst) to decide whether to isolate the infected     
+     machine or not.
 
-The objective is to install and configure both sysmon and splunk onto my Windows target machine and Windows Server so they can start collecting telemetry and send logs over to our splunk server. Diagrams to follow
+4. **User Prompt for Action:**
+   - The email from Tines includes options for the user to select "YES" or "NO" regarding isolating the compromised machine.
 
+5. **User Response Handling:**
+   - If the user selects "YES":
+     - Tines triggers LimaCharlie to automatically isolate the infected machine from the network.
+     - A follow-up message is sent to Slack, informing the team that "The computer has been isolated" along with the isolation status.
+   - If the user selects "NO":
+     - A message is sent to Slack stating, "The computer was not isolated, please investigate," prompting further manual investigation by the security team.
 
-The objective is to install and configure active directory onto my server, and then promote it to a domain controller, and finally configure the target machine to join the newly created domain. Diagrams to follow
+By implementing this automated incident response playbook, organizations can significantly reduce the time to detect and respond to security threats, ensuring swift action to mitigate potential damage and enhance overall security posture.
 
+### Conclusion
 
-The objective is to use Kali Linux to perform a brute force attack onto the created new users. By doing so, we will be able to see what this looks like by using splunk to query for this activity afterwards. Also, the set up and installation of atomic red team and then run a test using atomic red team to generate telemetry and detect similar attacks.
-Diagrams to follow
+The integration of SOAR and EDR platforms is a critical advancement in modern cybersecurity practices, enabling organizations to respond to threats with greater speed and efficiency. This project demonstrates the power of combining LimaCharlie’s robust detection and response capabilities with Tines’ sophisticated orchestration and automation features. By implementing this automated incident response workflow, we achieved the following:
 
+- **Rapid Detection:** Immediate identification of malicious activity through LimaCharlie, reducing the window of exposure.
+- **Automated Notification:** Swift and detailed alerts delivered via Slack and email, ensuring the security team is promptly informed.
+- **User-Driven Response:** Empowering users to make critical decisions regarding machine isolation, enhancing the responsiveness of the security operations center (SOC).
+- **Efficient Isolation:** Automatic isolation of infected machines when approved, minimizing potential damage and preventing further spread of malware.
+- **Clear Communication:** Transparent status updates on actions taken, ensuring the security team remains informed and can act accordingly.
 
-## Splunk inputs.conf
-Splunk inputs.conf
-
-[WinEventLog://Application]
-
-index = endpoint
-
-disabled = false
-
-[WinEventLog://Security]
-
-index = endpoint
-
-disabled = false
-
-[WinEventLog://System]
-
-index = endpoint
-
-disabled = false
-
-[WinEventLog://Microsoft-Windows-Sysmon/Operational]
-
-index = endpoint
-
-disabled = false
-
-renderXml = true
-
-source = XmlWinEventLog:Microsoft-Windows-Sysmon/Operational
-
+This project showcases the benefits of automating incident response processes, leading to a more resilient security posture. By leveraging tools like LimaCharlie and Tines, organizations can streamline their workflows, reduce manual intervention, and effectively mitigate risks. The successful implementation of this playbook not only demonstrates the technical capabilities of these tools but also highlights the importance of integrating SOAR and EDR solutions to safeguard against evolving cyber threats.
