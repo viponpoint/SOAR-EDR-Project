@@ -67,3 +67,19 @@ The integration of SOAR and EDR platforms is a critical advancement in modern cy
 - **Clear Communication:** Transparent status updates on actions taken, ensuring the security team remains informed and can act accordingly.
 
 This project showcases the benefits of automating incident response processes, leading to a more resilient security posture. By leveraging tools like LimaCharlie and Tines, organizations can streamline their workflows, reduce manual intervention, and effectively mitigate risks. The successful implementation of this playbook not only demonstrates the technical capabilities of these tools but also highlights the importance of integrating SOAR and EDR solutions to safeguard against evolving cyber threats.
+
+# Diagram
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/InstallLimaCharlie.jpeg)
+This is the installation of LimaCharlie in my Server machine
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/LimaToServer.png)
+Information about my connected Server can be seen in LimaCharlie interface
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RuleForLazagne.png)
+Creation of LaZagne detection and response rule in LimaCharlie
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RunLazagne.jpeg)
+Running of LaZagne in powershell on the Server in order to generate Telemetry
+
+
