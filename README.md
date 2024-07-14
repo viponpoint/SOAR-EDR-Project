@@ -39,6 +39,12 @@ In modern cybersecurity practices, the integration of SOAR (Security Orchestrati
 
    - Install and configure Windows Server 2022.
    - Disable the Windows Server firewall to facilitate the installation of LaZagne malware.
+   - To set up Slack for the project, register an account and then create a workspace, configure channels for security alerts, and generate an incoming webhook URL for Tines to send 
+     notifications.
+   - For Tines, register an account, create a new automation story, and integrate it with LimaCharlie and Slack by configuring the appropriate connectors and actions for the incident    
+     response workflow.
+   - To set up LimaCharlie for the project, register an account, deploy the LimaCharlie agent on the Windows Server 2022 machine, and configure detection rules to identify and respond 
+     to LaZagne malware infections.
 
 2. **Execution of Hack Tool:**
    - A user inadvertently executes a hack tool, resulting in the computer being infected with LaZagne malware.
