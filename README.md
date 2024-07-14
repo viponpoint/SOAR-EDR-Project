@@ -71,15 +71,15 @@ This project showcases the benefits of automating incident response processes, l
 # Diagram
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/InstallLimaCharlie.jpeg)
-This is the installation of LimaCharlie in my Server machine
+**This is the installation of LimaCharlie in my Server machine**
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/LimaToServer.png)
-Information about my connected Server can be seen in LimaCharlie interface
+**Information about my connected Server can be seen in LimaCharlie interface**
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RuleForLazagne.png)
-Creation of LaZagne detection and response rule in LimaCharlie
+**Creation of LaZagne detection and response rule in LimaCharlie**
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RunLazagne.jpeg)
-Running of LaZagne in powershell on the Server in order to generate Telemetry
+**Running of LaZagne in powershell on the Server in order to generate Telemetry**
 
 
