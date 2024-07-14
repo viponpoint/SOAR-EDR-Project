@@ -9,13 +9,16 @@ In modern cybersecurity practices, the integration of SOAR (Security Orchestrati
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SOAR-EDR.Diagram.png)
 
 #### Objectives
-1. **Detect Malware Execution:** Identify when a user executes a hack tool that leads to a LaZagne infection.
-2. **Automate Threat Notifications:** Send detailed alerts to the security team via Slack and email upon detection.
-3. **Prompt for User Action:** Request user input on whether to isolate the compromised machine.
-4. **Automate Machine Isolation:** Automatically isolate the infected machine if the user approves.
-5. **Update on Action Taken:** Inform the security team about the isolation status and the next steps.
+1. **Set Up the Environment:** Install and configure Windows Server 2022 as the client machine.
+2. **Facilitate Infection:** Disable the Windows Server firewall to allow LaZagne malware installation.
+3. **Detect Malware Execution:** Identify when a user executes a hack tool that leads to a LaZagne infection.
+4. **Automate Threat Notifications:** Send detailed alerts to the security team via Slack and email upon detection.
+5. **Prompt for User Action:** Request user input on whether to isolate the compromised machine.
+6. **Automate Machine Isolation:** Automatically isolate the infected machine if the user approves.
+7. **Update on Action Taken:** Inform the security team about the isolation status and the next steps.
 
 #### Skills Learnt
+- Installing and configuring Windows Server 2022.
 - Configuring and using EDR tools for malware detection.
 - Setting up and managing SOAR platforms for automated incident response.
 - Integrating different security tools to create cohesive workflows.
@@ -23,6 +26,7 @@ In modern cybersecurity practices, the integration of SOAR (Security Orchestrati
 - Implementing decision-based automation for incident remediation.
 
 #### Tools Used
+- **Windows Server 2022:** Operating system serving as the client machine for infection.
 - **LaZagne:** Malware used for retrieving passwords stored on the infected computer.
 - **LimaCharlie:** EDR platform used for detecting and responding to the malware infection.
 - **Tines:** SOAR platform used for orchestrating the automated incident response workflow.
@@ -31,23 +35,28 @@ In modern cybersecurity practices, the integration of SOAR (Security Orchestrati
 
 #### Steps Taken
 
-1. **Execution of Hack Tool:**
+1. **Environment Setup:**
+
+   - Install and configure Windows Server 2022.
+   - Disable the Windows Server firewall to facilitate the installation of LaZagne malware.
+
+2. **Execution of Hack Tool:**
    - A user inadvertently executes a hack tool, resulting in the computer being infected with LaZagne malware.
 
-2. **Detection by LimaCharlie:**
+3. **Detection by LimaCharlie:**
    - LimaCharlie detects the presence of LaZagne and logs the incident as a security threat.
    - The detection event is sent to Tines for further processing.
 
-3. **Processing by Tines:**
+4. **Processing by Tines:**
    - Upon receiving the detection data from LimaCharlie, Tines initiates an automated workflow.
    - Tines sends a detailed alert message to a predefined Slack channel, notifying the security team of the malware detection.
    - Simultaneously, Tines sends an email with the detection details to a designated email address, prompting the recipient (SOC analyst) to decide whether to isolate the infected     
      machine or not.
 
-4. **User Prompt for Action:**
+5. **User Prompt for Action:**
    - The email from Tines includes options for the user to select "YES" or "NO" regarding isolating the compromised machine.
 
-5. **User Response Handling:**
+6. **User Response Handling:**
    - If the user selects "YES":
      - Tines triggers LimaCharlie to automatically isolate the infected machine from the network.
      - A follow-up message is sent to Slack, informing the team that "The computer has been isolated" along with the isolation status.
