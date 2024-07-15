@@ -141,7 +141,7 @@ An alert is also sent to Slack as seen above that the system has been Isolated
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SlackNotIsolated.png)
-But if the Analyst click NO, then the system won't be isolated as seen from this Slack alert
+But if the Analyst clicks NO, then the system won't be isolated as seen from this Slack alert
 
 </br>
 
