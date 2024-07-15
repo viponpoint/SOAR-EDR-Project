@@ -145,6 +145,11 @@ But if the Analyst clicks NO, then the system won't be isolated as seen from thi
 
 </br>
 
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/Tines.png)
+
+</br>
+
+
 By integrating SOAR and EDR platforms, this project demonstrates an effective and automated approach to incident response. As stated above, it highlights key capabilities such as rapid detection, automated notifications, user-driven response, and efficient isolation of infected machines. This automated incident response playbook significantly enhances the security team's ability to mitigate risks swiftly, ensuring a robust defense against evolving cyber threats.
 
 
