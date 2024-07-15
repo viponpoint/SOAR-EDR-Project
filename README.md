@@ -103,4 +103,49 @@ Creation of LaZagne detection and response rule in LimaCharlie
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RunLazagne.jpeg)
 Running of LaZagne in powershell on the Server in order to generate Telemetry
 
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/LimaCharlieAlert.png)
+Alert is sent to LimaCharlie that LaZagne has been discovered
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/TinesMessage.png)
+Tines get an Alert about the activity of LaZagne
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SlackAlert.png)
+Slack receive an alert about the discovering of LaZagne as well
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/EmailAlert.png)
+An email is also sent to the provided Email address of the SOC analyst
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/YESorNO.png)
+If the Analyst click on Yes, then the system will be Isolated immediately
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/CompIsolated.png)
+The system is immediately isolated because the Analyst click Yes
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SlackIsolatedEM.png)
+And a message is also sent to Slack as seen above that the system has been Isolated
+
+</br>
+
+![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SlackNotIsolated.png)
+But if the Analyst click NO, then the system won't be isolated as seen from this Slack alert
+
+</br>
+
+
+
+
 
