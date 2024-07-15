@@ -86,7 +86,7 @@ This project showcases the benefits of automating incident response processes, l
 # Diagram
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/InstallLimaCharlie.jpeg)
-This is the installation of LimaCharlie in my Server machine
+This is the installation of LimaCharlie on my Server machine
 
 </br>
 
