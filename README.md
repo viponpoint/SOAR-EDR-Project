@@ -96,12 +96,12 @@ Information about my connected Server can be seen in LimaCharlie interface
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RuleForLazagne.png)
-Creation of LaZagne detection and response rule in LimaCharlie
+Creation of LaZagne detection and response rule in LimaCharlie. The purpose of creating detection and response rules for LaZagne in LimaCharlie is to automatically identify and mitigate the malware infection, triggering the necessary alerts and actions to protect the system.
 
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/RunLazagne.jpeg)
-Running of LaZagne in powershell on the Server in order to generate Telemetry
+Running of LaZagne in Powershell on the Server to generate Telemetry
 
 </br>
 
@@ -116,7 +116,7 @@ Tines get an Alert about the activity of LaZagne
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SlackAlert.png)
-Slack receive an alert about the discovering of LaZagne as well
+Slack received an alert about the discovery of LaZagne as well
 
 </br>
 
@@ -126,17 +126,17 @@ An email is also sent to the provided Email address of the SOC analyst
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/YESorNO.png)
-If the Analyst click on Yes, then the system will be Isolated immediately
+If the Analyst clicks on YES, the system will be Isolated immediately
 
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/CompIsolated.png)
-The system is immediately isolated because the Analyst click Yes
+The system is immediately isolated as seen in the above diagram because the Analyst clicks YES
 
 </br>
 
 ![SOAR-EDR Diagram](https://github.com/viponpoint/SOAR-EDR-Project/blob/main/SlackIsolatedEM.png)
-And a message is also sent to Slack as seen above that the system has been Isolated
+An alert is also sent to Slack as seen above that the system has been Isolated
 
 </br>
 
